@@ -26,8 +26,9 @@ $app = new Laravel\Lumen\Application(
 $app->withFacades();
 $app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
 $app->withEloquent();
-
+$app->register(SwooleTW\Http\LumenServiceProvider::class);
 $app->configure('database');
+$app->configure('swoole_http');
 
 
 /*
